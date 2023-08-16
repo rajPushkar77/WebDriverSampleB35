@@ -1,5 +1,6 @@
 package TestScripts;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ public class GooglePageTest {
 		// TODO Auto-generated method stub
 		WebDriver driver= new ChromeDriver();
 		//driver.get("https://www.google.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.navigate().to("https://www.google.com/");
 		WebElement srcBox= driver.findElement(By.id("APjFqb"));
 		srcBox.sendKeys("Java Tutorial");
